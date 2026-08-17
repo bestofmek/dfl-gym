@@ -1,11 +1,107 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../styles/global.css';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="DFL GYM - Allenati, evolvi e supera i tuoi limiti. Scopri la palestra e i percorsi di allenamento."
+    />
+    <title>DFL GYM | Allenati. Evolvi. Supera i tuoi limiti.</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo" aria-label="DFL GYM Home">
+          <div class="logo-mark">DFL</div>
+          GYM
+        </a>
+
+        <nav class="main-nav" aria-label="Navigazione principale">
+          <a href="#palestra">La palestra</a>
+          <a href="#allenamento">Allenamento</a>
+          <a href="#orari">Orari</a>
+          <a href="#contatti">Contatti</a>
+        </nav>
+
+        <a href="#contatti" class="header-cta">
+          Inizia ora
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="hero-eyebrow">
+              DFL GYM · TIVOLI TERME
+            </div>
+
+            <h1>
+              Allenati.<br />
+              <span>Evolvi.</span><br />
+              Supera i<br />
+              tuoi limiti.
+            </h1>
+
+            <p class="hero-description">
+              Un ambiente dedicato al tuo allenamento, ai tuoi obiettivi
+              e al percorso che vuoi costruire.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contatti" class="primary-button">
+                Inizia il tuo percorso
+              </a>
+
+              <a href="#allenamento" class="secondary-button">
+                Scopri la palestra
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-side" aria-hidden="true">
+            <div class="hero-frame">
+              <div class="hero-frame-content">
+                <div class="hero-frame-text">
+                  Il tuo allenamento
+                  <strong>Comincia qui.</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+          <div class="container hero-bottom-inner">
+            <div class="hero-stat">
+              <strong>Sala pesi</strong>
+              · Allenamento
+            </div>
+
+            <div class="hero-stat">
+              <strong>Functional</strong>
+              · Training
+            </div>
+
+            <div class="hero-stat">
+              <strong>Personal</strong>
+              · Training
+            </div>
+
+            <div class="hero-stat">
+              <strong>DFL GYM</strong>
+              · Tivoli Terme
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
