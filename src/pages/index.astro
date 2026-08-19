@@ -17,14 +17,23 @@ import '../styles/global.css';
   <body>
     <header class="site-header">
       <div class="container header-inner">
+
         <a href="/" class="logo" aria-label="DFL GYM Home">
-          <div class="logo-mark">DFL</div>
-          GYM
+          <img
+            src="/images/dfl-gym-logo.png"
+            alt="DFL GYM"
+            class="logo-image"
+          />
+
+          <span class="logo-text">
+            <strong>DFL GYM</strong>
+            <small>TIVOLI TERME</small>
+          </span>
         </a>
 
         <nav class="main-nav" aria-label="Navigazione principale">
           <a href="#palestra">La palestra</a>
-          <a href="#allenamento">Allenamento</a>
+          <a href="#corsi">Corsi</a>
           <a href="#orari">Orari</a>
           <a href="#contatti">Contatti</a>
         </nav>
@@ -32,17 +41,16 @@ import '../styles/global.css';
         <a href="#contatti" class="header-cta">
           Inizia ora
         </a>
+
       </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="container hero-grid">
-          <div class="hero-content">
-            <div class="hero-eyebrow">
-              DFL GYM · TIVOLI TERME
-            </div>
 
+          <div class="hero-content">
+            
             <h1>
               Allenati.<br />
               <span>Evolvi.</span><br />
@@ -60,7 +68,7 @@ import '../styles/global.css';
                 Inizia il tuo percorso
               </a>
 
-              <a href="#allenamento" class="secondary-button">
+              <a href="#palestra" class="secondary-button">
                 Scopri la palestra
               </a>
             </div>
@@ -76,29 +84,39 @@ import '../styles/global.css';
               </div>
             </div>
           </div>
+
         </div>
 
         <div class="hero-bottom">
           <div class="container hero-bottom-inner">
-            <div class="hero-stat">
-              <strong>Sala pesi</strong>
-              · Allenamento
-            </div>
 
-            <div class="hero-stat">
-              <strong>Functional</strong>
-              · Training
-            </div>
+            <a
+              href="https://www.instagram.com/dfl_gym/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero-social"
+            >
+              Instagram
+            </a>
 
-            <div class="hero-stat">
-              <strong>Personal</strong>
-              · Training
-            </div>
+            <a
+              href="https://www.facebook.com/profile.php?id=61560913769987"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero-social"
+            >
+              Facebook
+            </a>
 
-            <div class="hero-stat">
-              <strong>DFL GYM</strong>
-              · Tivoli Terme
-            </div>
+            <a
+              href="https://wa.me/393808661931"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero-social"
+            >
+              WhatsApp
+            </a>
+
           </div>
         </div>
       </section>
