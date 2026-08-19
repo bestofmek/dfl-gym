@@ -1,0 +1,229 @@
+---
+import '../styles/global.css';
+import '../styles/contatti.css';
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Contatta DFL GYM e inizia il tuo percorso di allenamento."
+    />
+    <title>Contatti | DFL GYM</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo" aria-label="DFL GYM Home">
+          <img
+            src="/images/dfl-gym-logo.png"
+            alt="DFL GYM"
+            class="logo-image"
+          />
+
+          <span class="logo-text">
+            <strong>DFL GYM</strong>
+            <small>TIVOLI TERME</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navigazione principale">
+          <a href="/">La palestra</a>
+          <a href="/corsi">Corsi</a>
+          <a href="/orari">Orari</a>
+          <a href="/contatti">Contatti</a>
+        </nav>
+
+        <a href="/contatti" class="header-cta">
+          Inizia ora
+        </a>
+      </div>
+    </header>
+
+    <main class="contact-page">
+
+      <section class="contact-hero">
+        <div class="container">
+
+          <h1>
+            Inizia il tuo<br />
+            <span>percorso.</span>
+          </h1>
+
+          <p class="contact-intro">
+            Raccontaci cosa stai cercando e ti aiuteremo a trovare
+            il percorso di allenamento più adatto ai tuoi obiettivi.
+          </p>
+
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container contact-grid">
+
+          <div class="contact-info">
+
+            <span class="contact-label">
+              PARLIAMONE
+            </span>
+
+            <h2>
+              Il prossimo<br />
+              passo è <span>tuo.</span>
+            </h2>
+
+            <p>
+              Compila il modulo e lasciaci i tuoi riferimenti.
+              Ti ricontatteremo per capire insieme da dove partire.
+            </p>
+
+            <div class="contact-details">
+
+              <a
+                href="https://wa.me/393808661931"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>WhatsApp</span>
+                <strong>380 866 1931</strong>
+              </a>
+
+              <a
+                href="https://www.instagram.com/dfl_gym/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Instagram</span>
+                <strong>@dfl_gym</strong>
+              </a>
+
+              <a
+                href="https://www.facebook.com/profile.php?id=61560913769987"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Facebook</span>
+                <strong>DFL GYM</strong>
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="contact-form-wrapper">
+
+            <form class="contact-form">
+
+              <div class="form-field">
+                <label for="name">Nome e cognome</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Il tuo nome"
+                  required
+                />
+              </div>
+
+              <div class="form-row">
+
+                <div class="form-field">
+                  <label for="phone">Telefono</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Il tuo numero"
+                    required
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="La tua email"
+                    required
+                  />
+                </div>
+
+              </div>
+
+              <fieldset class="form-field">
+                <legend>Cosa ti interessa?</legend>
+
+                <div class="interest-options">
+
+                  <label class="interest-option">
+                    <input
+                      type="radio"
+                      name="interest"
+                      value="sala-pesi"
+                    />
+                    <span>Sala Pesi</span>
+                  </label>
+
+                  <label class="interest-option">
+                    <input
+                      type="radio"
+                      name="interest"
+                      value="functional"
+                    />
+                    <span>Functional Training</span>
+                  </label>
+
+                  <label class="interest-option">
+                    <input
+                      type="radio"
+                      name="interest"
+                      value="personal"
+                    />
+                    <span>Personal Training</span>
+                  </label>
+
+                  <label class="interest-option">
+                    <input
+                      type="radio"
+                      name="interest"
+                      value="non-so"
+                    />
+                    <span>Non so ancora</span>
+                  </label>
+
+                </div>
+              </fieldset>
+
+              <div class="form-field">
+                <label for="message">Messaggio</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Raccontaci brevemente cosa stai cercando..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="form-submit">
+                Invia richiesta
+              </button>
+
+              <p class="form-note">
+                Ti ricontatteremo al più presto.
+              </p>
+
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>
