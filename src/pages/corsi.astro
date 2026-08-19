@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import '../styles/corsi.css';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -8,20 +10,31 @@ import '../styles/corsi.css';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+
     <meta
       name="description"
       content="DFL GYM - Scopri i nostri corsi e trova il percorso di allenamento più adatto a te."
     />
+
     <title>Corsi | DFL GYM</title>
   </head>
 
   <body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
     <header class="site-header">
       <div class="container header-inner">
 
-        <a href="/" class="logo" aria-label="DFL GYM Home">
+        <a
+          href={base}
+          class="logo"
+          aria-label="DFL GYM Home"
+        >
           <img
-            src="/images/dfl-gym-logo.png"
+            src={`${base}images/dfl-gym-logo.png`}
             alt="DFL GYM"
             class="logo-image"
           />
@@ -32,23 +45,50 @@ import '../styles/corsi.css';
           </span>
         </a>
 
-        <nav class="main-nav" aria-label="Navigazione principale">
-          <a href="/">La palestra</a>
-          <a href="/corsi">Corsi</a>
-          <a href="/orari">Orari</a>
-          <a href="/contatti">Contatti</a>
+
+        <nav
+          class="main-nav"
+          aria-label="Navigazione principale"
+        >
+          <a href={`${base}palestra/`}>
+            La palestra
+          </a>
+
+          <a href={`${base}corsi/`}>
+            Corsi
+          </a>
+
+          <a href={`${base}orari/`}>
+            Orari
+          </a>
+
+          <a href={`${base}contatti/`}>
+            Contatti
+          </a>
         </nav>
 
-        <a href="/contatti" class="header-cta">
+
+        <a
+          href={`${base}contatti/`}
+          class="header-cta"
+        >
           Inizia ora
         </a>
 
       </div>
     </header>
 
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
     <main class="courses-page">
 
+      <!-- HERO -->
+
       <section class="courses-hero">
+
         <div class="container">
 
           <h1>
@@ -62,19 +102,35 @@ import '../styles/corsi.css';
           </p>
 
         </div>
+
       </section>
 
 
+      <!-- CORSI -->
+
       <section class="courses-list">
+
         <div class="container">
 
+
+          <!-- SALA PESI -->
+
           <article class="course-card">
-            <div class="course-number">01</div>
+
+            <div class="course-number">
+              01
+            </div>
+
 
             <div class="course-content">
-              <p class="course-label">ALLENAMENTO</p>
 
-              <h2>SALA PESI</h2>
+              <p class="course-label">
+                ALLENAMENTO
+              </p>
+
+              <h2>
+                SALA PESI
+              </h2>
 
               <p>
                 Tutto lo spazio e l'attrezzatura di cui hai bisogno
@@ -82,50 +138,94 @@ import '../styles/corsi.css';
                 forza e raggiungere i tuoi obiettivi.
               </p>
 
-              <a href="/contatti" class="course-link">
+              <a
+                href={`${base}contatti/`}
+                class="course-link"
+              >
                 Scopri di più →
               </a>
+
             </div>
 
+
             <div class="course-placeholder">
-             <img src="/images/corsi-sala-pesi.jpg"
-                  alt="Sala pesi DFL GYM"/>
+
+              <img
+                src={`${base}images/corsi-sala-pesi.jpg`}
+                alt="Sala pesi DFL GYM"
+              />
+
             </div>
+
           </article>
 
 
+          <!-- KARATE -->
+
           <article class="course-card">
-            <div class="course-number">02</div>
+
+            <div class="course-number">
+              02
+            </div>
+
 
             <div class="course-content">
-              <p class="course-label">CORSO</p>
 
-              <h2>KARATE</h2>
-
-              <p>
-                Perfetta combinazione di disciplina, forza e agilità, il corso di Karate ti aiuta a sviluppare il corpo e la mente.
-                Per adulti e bambini.
+              <p class="course-label">
+                CORSO
               </p>
 
-              <a href="/contatti" class="course-link">
+              <h2>
+                KARATE
+              </h2>
+
+              <p>
+                Perfetta combinazione di disciplina, forza e agilità,
+                il corso di Karate ti aiuta a sviluppare il corpo e
+                la mente. Per adulti e bambini.
+              </p>
+
+              <a
+                href={`${base}contatti/`}
+                class="course-link"
+              >
                 Scopri di più →
               </a>
+
             </div>
 
+
             <div class="course-placeholder">
-             <img src="/images/corsi-karate.jpg"
-                  alt="Karate DFL GYM"/>
+
+              <img
+                src={`${base}images/corsi-karate.jpg`}
+                alt="Karate DFL GYM"
+              />
+
             </div>
+
           </article>
 
 
+          <!-- PERSONAL TRAINING -->
+
           <article class="course-card">
-            <div class="course-number">03</div>
+
+            <div class="course-number">
+              03
+            </div>
+
 
             <div class="course-content">
-              <p class="course-label">PERCORSO PERSONALIZZATO</p>
 
-              <h2>PERSONAL<br />TRAINING</h2>
+              <p class="course-label">
+                PERCORSO PERSONALIZZATO
+              </p>
+
+              <h2>
+                PERSONAL<br />
+                TRAINING
+              </h2>
 
               <p>
                 Un percorso costruito sulle tue esigenze, con
@@ -133,36 +233,56 @@ import '../styles/corsi.css';
                 accompagnarti verso i tuoi obiettivi.
               </p>
 
-              <a href="/contatti" class="course-link">
+              <a
+                href={`${base}contatti/`}
+                class="course-link"
+              >
                 Scopri di più →
               </a>
+
             </div>
 
-          <div class="course-placeholder">
-             <img src="/images/corsi-personal.png"
-                  alt="Personal Training DFL GYM"/>
+
+            <div class="course-placeholder">
+
+              <img
+                src={`${base}images/corsi-personal.png`}
+                alt="Personal Training DFL GYM"
+              />
+
             </div>
+
           </article>
 
         </div>
+
       </section>
 
 
+      <!-- CTA -->
+
       <section class="courses-cta">
+
         <div class="container">
 
-          <p>PRONTO A INIZIARE?</p>
+          <p>
+            PRONTO A INIZIARE?
+          </p>
 
           <h2>
             IL TUO PERCORSO<br />
             <span>COMINCIA QUI.</span>
           </h2>
 
-          <a href="/contatti" class="primary-button">
+          <a
+            href={`${base}contatti/`}
+            class="primary-button"
+          >
             Inizia il tuo percorso
           </a>
 
         </div>
+
       </section>
 
     </main>

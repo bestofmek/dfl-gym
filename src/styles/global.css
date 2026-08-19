@@ -397,8 +397,7 @@ a {
       145deg,
       rgba(32, 184, 181, 0.14),
       rgba(0, 0, 0, 0.55)
-    ),
-    url('/images/palestra1.jpg');
+    );
 
   background-size: cover;
   background-position: center;
