@@ -1,8 +1,8 @@
 /* =========================================================
-   CORSI PAGE
+   ORARI PAGE
 ========================================================= */
 
-.courses-page {
+.schedule-page {
   background: var(--color-black);
 }
 
@@ -11,7 +11,7 @@
    LABEL
 ========================================================= */
 
-.courses-label {
+.schedule-label {
   display: block;
 
   color: var(--color-accent);
@@ -29,7 +29,7 @@
    HERO
 ========================================================= */
 
-.courses-hero {
+.schedule-hero {
   position: relative;
 
   min-height: 72vh;
@@ -60,7 +60,7 @@
     );
 }
 
-.courses-hero::after {
+.schedule-hero::after {
   content: '';
 
   position: absolute;
@@ -77,12 +77,12 @@
     );
 }
 
-.courses-hero .container {
+.schedule-hero .container {
   position: relative;
   z-index: 2;
 }
 
-.courses-hero h1 {
+.schedule-hero h1 {
   max-width: 950px;
 
   margin-top: 18px;
@@ -100,11 +100,11 @@
   text-transform: uppercase;
 }
 
-.courses-hero h1 span {
+.schedule-hero h1 span {
   color: var(--color-accent);
 }
 
-.courses-intro {
+.schedule-intro {
   max-width: 570px;
 
   margin-top: 32px;
@@ -118,22 +118,22 @@
 
 
 /* =========================================================
-   COURSES LIST
+   SCHEDULE
 ========================================================= */
 
-.courses-list {
+.schedule-section {
   padding: 120px 0;
 
   background: var(--color-dark);
 }
 
-.courses-section-heading {
+.schedule-heading {
   max-width: 800px;
 
   margin-bottom: 60px;
 }
 
-.courses-section-heading h2 {
+.schedule-heading h2 {
   margin-top: 16px;
 
   color: var(--color-white);
@@ -149,26 +149,30 @@
   text-transform: uppercase;
 }
 
-.courses-section-heading h2 span {
+.schedule-heading h2 span {
   color: var(--color-accent);
 }
 
 
 /* =========================================================
-   COURSE GRID
+   SCHEDULE GRID
 ========================================================= */
 
-.courses-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.schedule-grid {
+  width: 100%;
 
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.course-card {
-  min-width: 0;
+.schedule-row {
+  min-height: 82px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
 
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -176,89 +180,104 @@
   background: var(--color-black);
 }
 
-.course-card-image {
-  position: relative;
+.schedule-row > * {
+  min-width: 0;
 
-  width: 100%;
-
-  aspect-ratio: 4 / 3;
-
-  overflow: hidden;
-
-  background: #0b1414;
+  padding: 0 30px;
 }
 
-.course-card-image::after {
-  content: '';
-
-  position: absolute;
-  inset: 0;
-
-  pointer-events: none;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(32, 184, 181, 0.08),
-      rgba(0, 0, 0, 0.4)
-    );
+.schedule-row > * + * {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.course-card-image img {
-  display: block;
+.schedule-row-header {
+  min-height: 56px;
 
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  transition: transform 0.5s ease;
-}
-
-.course-card:hover .course-card-image img {
-  transform: scale(1.03);
-}
-
-.course-card-content {
-  padding: 30px;
-}
-
-.course-number {
-  display: block;
+  background: rgba(32, 184, 181, 0.04);
 
   color: var(--color-accent);
 
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 800;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
 }
 
-.course-card h3 {
-  margin-top: 32px;
+.schedule-row strong {
+  color: var(--color-white);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+}
+
+.schedule-row span {
+  color: var(--color-muted);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.schedule-info {
+  padding: 120px 0;
+
+  background: var(--color-black);
+}
+
+.schedule-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.schedule-info h2 {
+  margin-top: 16px;
 
   color: var(--color-white);
 
-  font-size: 1.5rem;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+
+  line-height: 0.9;
+
+  letter-spacing: -0.07em;
+
   font-weight: 900;
 
-  letter-spacing: -0.04em;
+  text-transform: uppercase;
 }
 
-.course-card p {
-  margin-top: 18px;
+.schedule-info h2 span {
+  color: var(--color-accent);
+}
 
+.schedule-info-grid > div:last-child {
+  max-width: 560px;
+}
+
+.schedule-info-grid p:not(.schedule-label) {
   color: var(--color-muted);
 
-  font-size: 0.88rem;
+  font-size: 0.95rem;
 
   line-height: 1.7;
 }
 
-.course-card .secondary-button {
+.schedule-info .secondary-button {
   display: inline-block;
 
-  margin-top: 26px;
+  margin-top: 30px;
 }
 
 
@@ -266,7 +285,7 @@
    CTA
 ========================================================= */
 
-.courses-cta {
+.schedule-cta {
   padding: 130px 0;
 
   text-align: center;
@@ -277,10 +296,10 @@
       rgba(32, 184, 181, 0.14),
       transparent 42%
     ),
-    var(--color-black);
+    var(--color-dark);
 }
 
-.courses-cta h2 {
+.schedule-cta h2 {
   color: var(--color-white);
 
   font-size: clamp(3rem, 7vw, 6.5rem);
@@ -294,11 +313,11 @@
   text-transform: uppercase;
 }
 
-.courses-cta h2 span {
+.schedule-cta h2 span {
   color: var(--color-accent);
 }
 
-.courses-cta .primary-button {
+.schedule-cta .primary-button {
   margin-top: 38px;
 }
 
@@ -309,29 +328,35 @@
 
 @media (max-width: 900px) {
 
-  .courses-hero {
+  .schedule-hero {
     min-height: auto;
 
     padding: 120px 0 80px;
   }
 
-  .courses-hero h1 {
+  .schedule-hero h1 {
     font-size: clamp(3.4rem, 11vw, 6rem);
   }
 
-  .courses-list {
+  .schedule-section {
     padding: 90px 0;
   }
 
-  .courses-grid {
+  .schedule-info {
+    padding: 90px 0;
+  }
+
+  .schedule-info-grid {
     grid-template-columns: 1fr;
+
+    gap: 45px;
   }
 
-  .course-card-content {
-    padding: 28px 24px;
+  .schedule-info-grid > div:last-child {
+    max-width: 700px;
   }
 
-  .courses-cta {
+  .schedule-cta {
     padding: 100px 0;
   }
 }
@@ -343,13 +368,13 @@
 
 @media (max-width: 600px) {
 
-  .courses-hero {
+  .schedule-hero {
     min-height: auto;
 
     padding: 110px 0 70px;
   }
 
-  .courses-hero h1 {
+  .schedule-hero h1 {
     margin-top: 14px;
 
     font-size: clamp(3rem, 14vw, 4.7rem);
@@ -359,7 +384,7 @@
     letter-spacing: -0.065em;
   }
 
-  .courses-intro {
+  .schedule-intro {
     margin-top: 24px;
 
     font-size: 0.86rem;
@@ -368,50 +393,72 @@
   }
 
 
-  /* LIST */
+  /* SCHEDULE */
 
-  .courses-list {
+  .schedule-section {
     padding: 70px 0;
   }
 
-  .courses-section-heading {
+  .schedule-heading {
     margin-bottom: 40px;
   }
 
-  .courses-section-heading h2 {
+  .schedule-heading h2 {
     font-size: clamp(2.6rem, 12vw, 4.2rem);
   }
 
-  .course-card-content {
-    padding: 24px 20px;
+  .schedule-row {
+    min-height: 70px;
+
+    grid-template-columns: 0.9fr 1.1fr;
   }
 
-  .course-card h3 {
-    margin-top: 28px;
-
-    font-size: 1.3rem;
+  .schedule-row > * {
+    padding: 0 16px;
   }
 
-  .course-card p {
-    font-size: 0.82rem;
+  .schedule-row-header {
+    min-height: 48px;
+
+    font-size: 0.62rem;
   }
 
-  .course-card .secondary-button {
-    margin-top: 22px;
+  .schedule-row strong,
+  .schedule-row span {
+    font-size: 0.72rem;
+  }
+
+
+  /* INFO */
+
+  .schedule-info {
+    padding: 70px 0;
+  }
+
+  .schedule-info-grid {
+    gap: 36px;
+  }
+
+  .schedule-info h2 {
+    font-size: clamp(2.6rem, 12vw, 4.2rem);
+  }
+
+  .schedule-info-grid p:not(.schedule-label) {
+    font-size: 0.86rem;
   }
 
 
   /* CTA */
 
-  .courses-cta {
+  .schedule-cta {
     padding: 80px 0;
   }
 
-  .courses-cta h2 {
+  .schedule-cta h2 {
     font-size: clamp(2.8rem, 13vw, 4.5rem);
   }
 
-  .courses-cta .primary-button {
+  .schedule-cta .primary-button {
     width: 100%;
 
     margin-top: 30px;
@@ -425,27 +472,38 @@
 
 @media (max-width: 380px) {
 
-  .courses-hero {
+  .schedule-hero {
     padding: 100px 0 60px;
   }
 
-  .courses-hero h1 {
+  .schedule-hero h1 {
     font-size: clamp(2.7rem, 14vw, 4rem);
   }
 
-  .courses-list {
+  .schedule-section,
+  .schedule-info {
     padding: 60px 0;
   }
 
-  .courses-section-heading h2 {
+  .schedule-heading h2,
+  .schedule-info h2 {
     font-size: clamp(2.4rem, 13vw, 3.7rem);
   }
 
-  .courses-cta {
+  .schedule-row > * {
+    padding: 0 12px;
+  }
+
+  .schedule-row strong,
+  .schedule-row span {
+    font-size: 0.66rem;
+  }
+
+  .schedule-cta {
     padding: 70px 0;
   }
 
-  .courses-cta h2 {
+  .schedule-cta h2 {
     font-size: clamp(2.6rem, 13vw, 4rem);
   }
 }

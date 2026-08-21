@@ -15,17 +15,13 @@ const base = import.meta.env.BASE_URL.endsWith('/')
 
     <meta
       name="description"
-      content="DFL GYM - Scopri i nostri corsi e trova il percorso di allenamento più adatto a te."
+      content="Scopri i corsi e i percorsi di allenamento di DFL GYM a Tivoli Terme."
     />
 
     <title>Corsi | DFL GYM</title>
   </head>
 
   <body>
-
-    <!-- =========================
-         HEADER
-    ========================== -->
 
     <header class="site-header">
       <div class="container header-inner">
@@ -47,13 +43,12 @@ const base = import.meta.env.BASE_URL.endsWith('/')
           </span>
         </a>
 
-
         <nav
           class="main-nav"
           aria-label="Navigazione principale"
         >
           <a href={`${base}palestra/`}>
-            La palestra
+            La Palestra
           </a>
 
           <a href={`${base}corsi/`}>
@@ -69,6 +64,39 @@ const base = import.meta.env.BASE_URL.endsWith('/')
           </a>
         </nav>
 
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-label="Apri il menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div
+          id="mobile-menu"
+          class="mobile-menu-panel"
+          hidden
+        >
+          <a href={`${base}palestra/`}>
+            La Palestra
+          </a>
+
+          <a href={`${base}corsi/`}>
+            Corsi
+          </a>
+
+          <a href={`${base}orari/`}>
+            Orari
+          </a>
+
+          <a href={`${base}contatti/`}>
+            Contatti
+          </a>
+        </div>
 
         <a
           href={`${base}contatti/`}
@@ -81,206 +109,182 @@ const base = import.meta.env.BASE_URL.endsWith('/')
     </header>
 
 
-    <!-- =========================
-         MAIN
-    ========================== -->
-
     <main class="courses-page">
 
-      <!-- HERO -->
-
       <section class="courses-hero">
-
         <div class="container">
 
+          <p class="courses-label">
+            DFL GYM · TIVOLI TERME
+          </p>
+
           <h1>
-            SCOPRI IL TUO<br />
-            <span>ALLENAMENTO.</span>
+            TROVA IL TUO<br />
+            <span>MODO DI ALLENARTI.</span>
           </h1>
 
           <p class="courses-intro">
-            Percorsi pensati per obiettivi diversi, un unico ambiente
-            dedicato alla tua crescita.
+            Percorsi diversi, un unico obiettivo:
+            aiutarti a migliorare, giorno dopo giorno.
           </p>
 
         </div>
-
       </section>
 
-
-      <!-- CORSI -->
 
       <section class="courses-list">
 
         <div class="container">
 
+          <div class="courses-section-heading">
+            <p class="courses-label">
+              I NOSTRI PERCORSI
+            </p>
 
-          <!-- SALA PESI -->
-
-          <article class="course-card">
-
-            <div class="course-number">
-              01
-            </div>
-
-
-            <div class="course-content">
-
-              <p class="course-label">
-                ALLENAMENTO
-              </p>
-
-              <h2>
-                SALA PESI
-              </h2>
-
-              <p>
-                Tutto lo spazio e l'attrezzatura di cui hai bisogno
-                per costruire il tuo allenamento, migliorare la tua
-                forza e raggiungere i tuoi obiettivi.
-              </p>
-
-              <a
-                href={`${base}contatti/`}
-                class="course-link"
-              >
-                Scopri di più →
-              </a>
-
-            </div>
+            <h2>
+              SCEGLI COME<br />
+              <span>ALLENARTI.</span>
+            </h2>
+          </div>
 
 
-            <div class="course-placeholder">
+          <div class="courses-grid">
 
-              <img
-                src={`${base}images/corsi-sala-pesi.jpg`}
-                alt="Sala pesi DFL GYM"
-              />
+            <article class="course-card">
 
-            </div>
+              <div class="course-card-image">
+                <img
+                  src={`${base}images/corsi-sala-pesi.jpg`}
+                  alt="Sala pesi DFL GYM"
+                />
+              </div>
 
-          </article>
+              <div class="course-card-content">
 
+                <span class="course-number">
+                  01
+                </span>
 
-          <!-- KARATE -->
+                <h3>
+                  SALA PESI
+                </h3>
 
-          <article class="course-card">
+                <p>
+                  Uno spazio completo per allenarti in autonomia,
+                  migliorare forza e forma fisica e costruire il
+                  tuo percorso con costanza.
+                </p>
 
-            <div class="course-number">
-              02
-            </div>
+                <a
+                  href={`${base}contatti/`}
+                  class="secondary-button"
+                >
+                  Scopri di più
+                </a>
 
+              </div>
 
-            <div class="course-content">
-
-              <p class="course-label">
-                CORSO
-              </p>
-
-              <h2>
-                KARATE
-              </h2>
-
-              <p>
-                Perfetta combinazione di disciplina, forza e agilità,
-                il corso di Karate ti aiuta a sviluppare il corpo e
-                la mente. Per adulti e bambini.
-              </p>
-
-              <a
-                href={`${base}contatti/`}
-                class="course-link"
-              >
-                Scopri di più →
-              </a>
-
-            </div>
+            </article>
 
 
-            <div class="course-placeholder">
+            <article class="course-card">
 
-              <img
-                src={`${base}images/corsi-karate.jpg`}
-                alt="Karate DFL GYM"
-              />
+              <div class="course-card-image">
+                <img
+                  src={`${base}images/corsi-karate.jpg`}
+                  alt="Corso di Karate DFL GYM"
+                />
+              </div>
 
-            </div>
+              <div class="course-card-content">
 
-          </article>
+                <span class="course-number">
+                  02
+                </span>
 
+                <h3>
+                  KARATE
+                </h3>
 
-          <!-- PERSONAL TRAINING -->
+                <p>
+                  Tecnica, disciplina e controllo. Un percorso
+                  dedicato a chi vuole sviluppare corpo e mente
+                  attraverso le arti marziali.
+                </p>
 
-          <article class="course-card">
+                <a
+                  href={`${base}contatti/`}
+                  class="secondary-button"
+                >
+                  Scopri di più
+                </a>
 
-            <div class="course-number">
-              03
-            </div>
+              </div>
 
-
-            <div class="course-content">
-
-              <p class="course-label">
-                PERCORSO PERSONALIZZATO
-              </p>
-
-              <h2>
-                PERSONAL<br />
-                TRAINING
-              </h2>
-
-              <p>
-                Un percorso costruito sulle tue esigenze, con
-                attenzione, metodo e un programma pensato per
-                accompagnarti verso i tuoi obiettivi.
-              </p>
-
-              <a
-                href={`${base}contatti/`}
-                class="course-link"
-              >
-                Scopri di più →
-              </a>
-
-            </div>
+            </article>
 
 
-            <div class="course-placeholder">
+            <article class="course-card">
 
-              <img
-                src={`${base}images/corsi-personal.png`}
-                alt="Personal Training DFL GYM"
-              />
+              <div class="course-card-image">
+                <img
+                  src={`${base}images/corsi-personal.png`}
+                  alt="Personal Training DFL GYM"
+                />
+              </div>
 
-            </div>
+              <div class="course-card-content">
 
-          </article>
+                <span class="course-number">
+                  03
+                </span>
+
+                <h3>
+                  PERSONAL TRAINING
+                </h3>
+
+                <p>
+                  Un percorso costruito sulle tue esigenze,
+                  con attenzione, metodo e un programma pensato
+                  per raggiungere i tuoi obiettivi.
+                </p>
+
+                <a
+                  href={`${base}contatti/`}
+                  class="secondary-button"
+                >
+                  Scopri di più
+                </a>
+
+              </div>
+
+            </article>
+
+          </div>
 
         </div>
 
       </section>
 
 
-      <!-- CTA -->
-
       <section class="courses-cta">
 
         <div class="container">
 
-          <p>
-            PRONTO A INIZIARE?
+          <p class="courses-label">
+            NON SAI DA DOVE INIZIARE?
           </p>
 
           <h2>
-            IL TUO PERCORSO<br />
-            <span>COMINCIA QUI.</span>
+            PARLIAMONE.<br />
+            <span>TROVIAMO IL TUO PERCORSO.</span>
           </h2>
 
           <a
             href={`${base}contatti/`}
             class="primary-button"
           >
-            Inizia il tuo percorso
+            Inizia ora
           </a>
 
         </div>
@@ -288,6 +292,11 @@ const base = import.meta.env.BASE_URL.endsWith('/')
       </section>
 
     </main>
+
+
+    <script>
+      import '../scripts/mobile-menu.js';
+    </script>
 
   </body>
 </html>

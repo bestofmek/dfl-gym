@@ -1,0 +1,157 @@
+---
+import '../styles/global.css';
+
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'DFL GYM | Allenati. Evolvi. Supera i tuoi limiti.',
+  description = 'DFL GYM - Allenati, evolvi e supera i tuoi limiti. Scopri la palestra e i percorsi di allenamento.'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta
+      name="description"
+      content={description}
+    />
+
+    <title>{title}</title>
+  </head>
+
+  <body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+      <div class="container header-inner">
+
+        <!-- LOGO -->
+
+        <a
+          href={base}
+          class="logo"
+          aria-label="DFL GYM Home"
+        >
+          <img
+            src={`${base}images/dfl-gym-logo.png`}
+            alt="DFL GYM"
+            class="logo-image"
+          />
+
+          <span class="logo-text">
+            <strong>DFL GYM</strong>
+            <small>TIVOLI TERME</small>
+          </span>
+        </a>
+
+
+        <!-- NAVIGAZIONE DESKTOP -->
+
+        <nav
+          class="main-nav"
+          aria-label="Navigazione principale"
+        >
+          <a href={`${base}palestra/`}>
+            La Palestra
+          </a>
+
+          <a href={`${base}corsi/`}>
+            Corsi
+          </a>
+
+          <a href={`${base}orari/`}>
+            Orari
+          </a>
+
+          <a href={`${base}contatti/`}>
+            Contatti
+          </a>
+        </nav>
+
+
+        <!-- MENU MOBILE -->
+
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-label="Apri il menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+
+        <!-- MENU MOBILE PANEL -->
+
+        <div
+          id="mobile-menu"
+          class="mobile-menu-panel"
+          hidden
+        >
+          <a href={`${base}palestra/`}>
+            La Palestra
+          </a>
+
+          <a href={`${base}corsi/`}>
+            Corsi
+          </a>
+
+          <a href={`${base}orari/`}>
+            Orari
+          </a>
+
+          <a href={`${base}contatti/`}>
+            Contatti
+          </a>
+        </div>
+
+
+        <!-- CTA DESKTOP -->
+
+        <a
+          href={`${base}contatti/`}
+          class="header-cta"
+        >
+          Inizia ora
+        </a>
+
+      </div>
+    </header>
+
+
+    <!-- =========================
+         PAGE CONTENT
+    ========================== -->
+
+    <main>
+      <slot />
+    </main>
+
+
+    <!-- =========================
+         MOBILE MENU SCRIPT
+    ========================== -->
+
+    <script>
+      import '../scripts/mobile-menu.js';
+    </script>
+
+  </body>
+</html>

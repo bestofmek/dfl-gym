@@ -7,6 +7,10 @@ const base = import.meta.env.BASE_URL.endsWith('/')
   : `${import.meta.env.BASE_URL}/`;
 ---
 
+<script>
+  import '../scripts/mobile-menu.js';
+</script>
+
 <!doctype html>
 <html lang="it">
   <head>
@@ -22,8 +26,15 @@ const base = import.meta.env.BASE_URL.endsWith('/')
   </head>
 
   <body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
     <header class="site-header">
       <div class="container header-inner">
+
+        <!-- LOGO -->
 
         <a
           href={base}
@@ -41,6 +52,9 @@ const base = import.meta.env.BASE_URL.endsWith('/')
             <small>TIVOLI TERME</small>
           </span>
         </a>
+
+
+        <!-- NAVIGAZIONE DESKTOP -->
 
         <nav
           class="main-nav"
@@ -63,6 +77,49 @@ const base = import.meta.env.BASE_URL.endsWith('/')
           </a>
         </nav>
 
+
+        <!-- MENU MOBILE -->
+
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-label="Apri il menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+
+        <!-- PANNELLO MENU MOBILE -->
+
+        <div
+          id="mobile-menu"
+          class="mobile-menu-panel"
+          hidden
+        >
+          <a href={`${base}palestra/`}>
+            La palestra
+          </a>
+
+          <a href={`${base}corsi/`}>
+            Corsi
+          </a>
+
+          <a href={`${base}orari/`}>
+            Orari
+          </a>
+
+          <a href={`${base}contatti/`}>
+            Contatti
+          </a>
+        </div>
+
+
+        <!-- CTA DESKTOP -->
+
         <a
           href={`${base}contatti/`}
           class="header-cta"
@@ -73,9 +130,20 @@ const base = import.meta.env.BASE_URL.endsWith('/')
       </div>
     </header>
 
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
     <main class="contact-page">
 
+
+      <!-- =========================
+           HERO
+      ========================== -->
+
       <section class="contact-hero">
+
         <div class="container">
 
           <h1>
@@ -89,10 +157,22 @@ const base = import.meta.env.BASE_URL.endsWith('/')
           </p>
 
         </div>
+
       </section>
 
+
+      <!-- =========================
+           CONTATTI + FORM
+      ========================== -->
+
       <section class="contact-section">
+
         <div class="container contact-grid">
+
+
+          <!-- =========================
+               INFORMAZIONI
+          ========================== -->
 
           <div class="contact-info">
 
@@ -110,7 +190,12 @@ const base = import.meta.env.BASE_URL.endsWith('/')
               Ti ricontatteremo per capire insieme da dove partire.
             </p>
 
+
+            <!-- CONTATTI -->
+
             <div class="contact-details">
+
+              <!-- WHATSAPP -->
 
               <a
                 href="https://wa.me/393808661931"
@@ -121,6 +206,9 @@ const base = import.meta.env.BASE_URL.endsWith('/')
                 <strong>380 866 1931</strong>
               </a>
 
+
+              <!-- INSTAGRAM -->
+
               <a
                 href="https://www.instagram.com/dfl_gym/"
                 target="_blank"
@@ -129,6 +217,9 @@ const base = import.meta.env.BASE_URL.endsWith('/')
                 <span>Instagram</span>
                 <strong>@dfl_gym</strong>
               </a>
+
+
+              <!-- FACEBOOK -->
 
               <a
                 href="https://www.facebook.com/profile.php?id=61560913769987"
@@ -143,6 +234,11 @@ const base = import.meta.env.BASE_URL.endsWith('/')
 
           </div>
 
+
+          <!-- =========================
+               FORM
+          ========================== -->
+
           <div class="contact-form-wrapper">
 
             <form
@@ -150,7 +246,11 @@ const base = import.meta.env.BASE_URL.endsWith('/')
               method="POST"
             >
 
+
+              <!-- NOME -->
+
               <div class="form-field">
+
                 <label for="name">
                   Nome e cognome
                 </label>
@@ -163,11 +263,16 @@ const base = import.meta.env.BASE_URL.endsWith('/')
                   autocomplete="name"
                   required
                 />
+
               </div>
+
+
+              <!-- TELEFONO + EMAIL -->
 
               <div class="form-row">
 
                 <div class="form-field">
+
                   <label for="phone">
                     Telefono
                   </label>
@@ -180,9 +285,12 @@ const base = import.meta.env.BASE_URL.endsWith('/')
                     autocomplete="tel"
                     required
                   />
+
                 </div>
 
+
                 <div class="form-field">
+
                   <label for="email">
                     Email
                   </label>
@@ -195,9 +303,13 @@ const base = import.meta.env.BASE_URL.endsWith('/')
                     autocomplete="email"
                     required
                   />
+
                 </div>
 
               </div>
+
+
+              <!-- INTERESSE -->
 
               <fieldset class="form-field">
 
@@ -208,44 +320,70 @@ const base = import.meta.env.BASE_URL.endsWith('/')
                 <div class="interest-options">
 
                   <label class="interest-option">
+
                     <input
                       type="radio"
                       name="interest"
                       value="sala-pesi"
                     />
-                    <span>Sala Pesi</span>
+
+                    <span>
+                      Sala Pesi
+                    </span>
+
                   </label>
 
+
                   <label class="interest-option">
+
                     <input
                       type="radio"
                       name="interest"
                       value="karate"
                     />
-                    <span>Karate</span>
+
+                    <span>
+                      Karate
+                    </span>
+
                   </label>
 
+
                   <label class="interest-option">
+
                     <input
                       type="radio"
                       name="interest"
                       value="personal"
                     />
-                    <span>Personal Training</span>
+
+                    <span>
+                      Personal Training
+                    </span>
+
                   </label>
 
+
                   <label class="interest-option">
+
                     <input
                       type="radio"
                       name="interest"
                       value="non-so"
                     />
-                    <span>Non so ancora</span>
+
+                    <span>
+                      Non so ancora
+                    </span>
+
                   </label>
 
                 </div>
 
               </fieldset>
+
+
+              <!-- MESSAGGIO -->
 
               <div class="form-field">
 
@@ -262,12 +400,16 @@ const base = import.meta.env.BASE_URL.endsWith('/')
 
               </div>
 
+
+              <!-- INVIO -->
+
               <button
                 type="submit"
                 class="form-submit"
               >
                 Invia richiesta
               </button>
+
 
               <p class="form-note">
                 Ti ricontatteremo al più presto.
@@ -278,8 +420,10 @@ const base = import.meta.env.BASE_URL.endsWith('/')
           </div>
 
         </div>
+
       </section>
 
     </main>
+
   </body>
 </html>

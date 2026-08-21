@@ -1,210 +1,134 @@
 ---
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 ---
 
-<!doctype html>
-<html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+<BaseLayout
+  title="DFL GYM | Allenati. Evolvi. Supera i tuoi limiti."
+  description="DFL GYM - Allenati, evolvi e supera i tuoi limiti. Scopri la palestra e i percorsi di allenamento."
+>
 
-    <meta
-      name="description"
-      content="DFL GYM - Allenati, evolvi e supera i tuoi limiti. Scopri la palestra e i percorsi di allenamento."
-    />
+  <section class="hero">
 
-    <title>DFL GYM | Allenati. Evolvi. Supera i tuoi limiti.</title>
-  </head>
+    <div class="container hero-grid">
 
-  <body>
+      <!-- HERO CONTENT -->
+
+      <div class="hero-content">
+
+        <h1>
+          Allenati.<br />
+          <span>Evolvi.</span><br />
+          Supera i<br />
+          tuoi limiti.
+        </h1>
+
+
+        <p class="hero-description">
+          Un ambiente dedicato al tuo allenamento, ai tuoi obiettivi
+          e al percorso che vuoi costruire.
+        </p>
+
+
+        <div class="hero-actions">
+
+          <a
+            href={`${base}contatti/`}
+            class="primary-button"
+          >
+            Inizia il tuo percorso
+          </a>
+
+
+          <a
+            href={`${base}palestra/`}
+            class="secondary-button"
+          >
+            Scopri la palestra
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- HERO IMAGE -->
+
+      <div
+        class="hero-side"
+        aria-hidden="true"
+      >
+
+        <div class="hero-frame">
+
+          <div class="hero-frame-content">
+
+            <img
+              src={`${base}images/palestra1.jpg`}
+              alt="Interno della palestra DFL GYM"
+              class="hero-image"
+            />
+
+            <div class="hero-frame-overlay"></div>
+
+            <div class="hero-frame-text">
+              Il tuo allenamento
+              <strong>Comincia qui.</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
 
     <!-- =========================
-         HEADER
+         SOCIAL
     ========================== -->
 
-    <header class="site-header">
-      <div class="container header-inner">
+    <div class="hero-bottom">
+
+      <div class="container hero-bottom-inner">
 
         <a
-          href={base}
-          class="logo"
-          aria-label="DFL GYM Home"
+          href="https://www.instagram.com/dfl_gym/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero-social"
         >
-          <img
-            src={`${base}images/dfl-gym-logo.png`}
-            alt="DFL GYM"
-            class="logo-image"
-          />
-
-          <span class="logo-text">
-            <strong>DFL GYM</strong>
-            <small>TIVOLI TERME</small>
-          </span>
+          Instagram
         </a>
 
 
-        <nav
-          class="main-nav"
-          aria-label="Navigazione principale"
+        <a
+          href="https://www.facebook.com/profile.php?id=61560913769987"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero-social"
         >
-          <a href={`${base}palestra/`}>
-            La Palestra
-          </a>
-
-          <a href={`${base}corsi/`}>
-            Corsi
-          </a>
-
-          <a href={`${base}orari/`}>
-            Orari
-          </a>
-
-          <a href={`${base}contatti/`}>
-            Contatti
-          </a>
-        </nav>
+          Facebook
+        </a>
 
 
         <a
-          href={`${base}contatti/`}
-          class="header-cta"
+          href="https://wa.me/393808661931"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero-social"
         >
-          Inizia ora
+          WhatsApp
         </a>
 
       </div>
-    </header>
 
+    </div>
 
-    <!-- =========================
-         MAIN
-    ========================== -->
+  </section>
 
-    <main>
-
-      <section class="hero">
-
-        <div class="container hero-grid">
-
-          <!-- HERO CONTENT -->
-
-          <div class="hero-content">
-
-            <h1>
-              Allenati.<br />
-              <span>Evolvi.</span><br />
-              Supera i<br />
-              tuoi limiti.
-            </h1>
-
-
-            <p class="hero-description">
-              Un ambiente dedicato al tuo allenamento, ai tuoi obiettivi
-              e al percorso che vuoi costruire.
-            </p>
-
-
-            <div class="hero-actions">
-
-              <a
-                href={`${base}contatti/`}
-                class="primary-button"
-              >
-                Inizia il tuo percorso
-              </a>
-
-
-              <a
-                href={`${base}palestra/`}
-                class="secondary-button"
-              >
-                Scopri la palestra
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- HERO IMAGE -->
-
-          <div
-            class="hero-side"
-            aria-hidden="true"
-          >
-
-            <div class="hero-frame">
-  <div class="hero-frame-content">
-    <img
-      src={`${base}images/palestra1.jpg`}
-      alt="Interno della palestra DFL GYM"
-      class="hero-image"
-    />
-
-    <div class="hero-frame-overlay"></div>
-
-                <div class="hero-frame-text">
-                  Il tuo allenamento
-                  <strong>Comincia qui.</strong>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- =========================
-             SOCIAL
-        ========================== -->
-
-        <div class="hero-bottom">
-
-          <div class="container hero-bottom-inner">
-
-            <a
-              href="https://www.instagram.com/dfl_gym/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hero-social"
-            >
-              Instagram
-            </a>
-
-
-            <a
-              href="https://www.facebook.com/profile.php?id=61560913769987"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hero-social"
-            >
-              Facebook
-            </a>
-
-
-            <a
-              href="https://wa.me/393808661931"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hero-social"
-            >
-              WhatsApp
-            </a>
-
-          </div>
-
-        </div>
-
-      </section>
-
-    </main>
-
-  </body>
-</html>
+</BaseLayout>

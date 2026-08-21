@@ -1,0 +1,270 @@
+---
+import '../styles/global.css';
+import '../styles/orari.css';
+
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta
+      name="description"
+      content="Scopri gli orari di apertura di DFL GYM a Tivoli Terme."
+    />
+
+    <title>Orari | DFL GYM</title>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+      <div class="container header-inner">
+
+        <a
+          href={base}
+          class="logo"
+          aria-label="DFL GYM Home"
+        >
+          <img
+            src={`${base}images/dfl-gym-logo.png`}
+            alt="DFL GYM"
+            class="logo-image"
+          />
+
+          <span class="logo-text">
+            <strong>DFL GYM</strong>
+            <small>TIVOLI TERME</small>
+          </span>
+        </a>
+
+        <nav
+          class="main-nav"
+          aria-label="Navigazione principale"
+        >
+          <a href={`${base}palestra/`}>
+            La Palestra
+          </a>
+
+          <a href={`${base}corsi/`}>
+            Corsi
+          </a>
+
+          <a href={`${base}orari/`}>
+            Orari
+          </a>
+
+          <a href={`${base}contatti/`}>
+            Contatti
+          </a>
+        </nav>
+
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-label="Apri il menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div
+          id="mobile-menu"
+          class="mobile-menu-panel"
+          hidden
+        >
+          <a href={`${base}palestra/`}>
+            La Palestra
+          </a>
+
+          <a href={`${base}corsi/`}>
+            Corsi
+          </a>
+
+          <a href={`${base}orari/`}>
+            Orari
+          </a>
+
+          <a href={`${base}contatti/`}>
+            Contatti
+          </a>
+        </div>
+
+        <a
+          href={`${base}contatti/`}
+          class="header-cta"
+        >
+          Inizia ora
+        </a>
+
+      </div>
+    </header>
+
+
+    <main class="schedule-page">
+
+      <section class="schedule-hero">
+        <div class="container">
+
+          <p class="schedule-label">
+            DFL GYM · TIVOLI TERME
+          </p>
+
+          <h1>
+            IL TUO TEMPO.<br />
+            IL TUO <span>ALLENAMENTO.</span>
+          </h1>
+
+          <p class="schedule-intro">
+            Organizza il tuo allenamento e trova il momento
+            giusto per dedicarti ai tuoi obiettivi.
+          </p>
+
+        </div>
+      </section>
+
+
+      <section class="schedule-section">
+
+        <div class="container">
+
+          <div class="schedule-heading">
+
+            <p class="schedule-label">
+              ORARI DI APERTURA
+            </p>
+
+            <h2>
+              QUANDO<br />
+              <span>ALLENARTI.</span>
+            </h2>
+
+          </div>
+
+
+          <div class="schedule-grid">
+
+            <div class="schedule-row schedule-row-header">
+              <span>GIORNO</span>
+              <span>ORARIO</span>
+            </div>
+
+            <div class="schedule-row">
+              <strong>LUNEDÌ</strong>
+              <span>06:00 — 23:00</span>
+            </div>
+
+            <div class="schedule-row">
+              <strong>MARTEDÌ</strong>
+              <span>06:00 — 23:00</span>
+            </div>
+
+            <div class="schedule-row">
+              <strong>MERCOLEDÌ</strong>
+              <span>06:00 — 23:00</span>
+            </div>
+
+            <div class="schedule-row">
+              <strong>GIOVEDÌ</strong>
+              <span>06:00 — 23:00</span>
+            </div>
+
+            <div class="schedule-row">
+              <strong>VENERDÌ</strong>
+              <span>06:00 — 23:00</span>
+            </div>
+
+            <div class="schedule-row">
+              <strong>SABATO</strong>
+              <span>08:00 — 20:00</span>
+            </div>
+
+            <div class="schedule-row">
+              <strong>DOMENICA</strong>
+              <span>CHIUSO</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section class="schedule-info">
+
+        <div class="container schedule-info-grid">
+
+          <div>
+            <p class="schedule-label">
+              CORSI
+            </p>
+
+            <h2>
+              ORARI<br />
+              <span>SPECIFICI.</span>
+            </h2>
+          </div>
+
+          <div>
+            <p>
+              Gli orari dei corsi possono variare in base
+              alla disciplina e al calendario.
+              Per conoscere gli appuntamenti disponibili,
+              contattaci direttamente.
+            </p>
+
+            <a
+              href={`${base}corsi/`}
+              class="secondary-button"
+            >
+              Scopri i corsi
+            </a>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section class="schedule-cta">
+
+        <div class="container">
+
+          <p class="schedule-label">
+            PRONTO A INIZIARE?
+          </p>
+
+          <h2>
+            TROVA IL TUO<br />
+            <span>MOMENTO.</span>
+          </h2>
+
+          <a
+            href={`${base}contatti/`}
+            class="primary-button"
+          >
+            Inizia ora
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <script>
+      import '../scripts/mobile-menu.js';
+    </script>
+
+  </body>
+</html>

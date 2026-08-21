@@ -1,0 +1,250 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/palestra.css';
+
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout
+  title="La Palestra | DFL GYM"
+  description="Scopri DFL GYM a Tivoli Terme: ambiente, attrezzatura e spazio dedicati al tuo allenamento."
+>
+
+  <main class="gym-page">
+
+    <!-- HERO -->
+    <section class="gym-hero">
+
+      <div class="container">
+
+        <p class="gym-label">
+          DFL GYM · TIVOLI TERME
+        </p>
+
+        <h1>
+          UNO SPAZIO<br />
+          PER <span>SUPERARE</span><br />
+          I TUOI LIMITI.
+        </h1>
+
+        <p class="gym-intro">
+          Un ambiente pensato per allenarti davvero.
+          Spazi, attrezzatura e professionalità al servizio
+          dei tuoi obiettivi.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRESENTAZIONE -->
+    <section class="gym-introduction">
+
+      <div class="container gym-introduction-grid">
+
+        <div class="gym-introduction-image">
+
+          <img
+            src={`${base}images/palestra1.jpg`}
+            alt="Interno della palestra DFL GYM"
+          />
+
+        </div>
+
+        <div class="gym-introduction-content">
+
+          <p class="gym-label">
+            LA PALESTRA
+          </p>
+
+          <h2>
+            ALLENATI<br />
+            <span>SENZA DISTRAZIONI.</span>
+          </h2>
+
+          <p>
+            DFL GYM nasce con un'idea semplice: creare un luogo
+            dove potersi allenare con serietà, costanza e
+            determinazione.
+          </p>
+
+          <p>
+            Un ambiente dedicato a chi vuole migliorare,
+            indipendentemente dal proprio livello di partenza.
+            Che tu stia iniziando adesso o abbia già esperienza,
+            qui trovi lo spazio per costruire il tuo percorso.
+          </p>
+
+          <a
+            href={`${base}contatti/`}
+            class="primary-button"
+          >
+            Inizia il tuo percorso
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PUNTI DI FORZA -->
+    <section class="gym-features">
+
+      <div class="container">
+
+        <div class="gym-section-heading">
+
+          <p class="gym-label">
+            PERCHÉ DFL GYM
+          </p>
+
+          <h2>
+            IL TUO ALLENAMENTO.<br />
+            <span>IL TUO SPAZIO.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="gym-features-grid">
+
+          <article class="gym-feature">
+
+            <span class="gym-feature-number">
+              01
+            </span>
+
+            <h3>
+              SPAZIO
+            </h3>
+
+            <p>
+              Un ambiente organizzato e funzionale, pensato
+              per permetterti di allenarti con libertà e
+              concentrazione.
+            </p>
+
+          </article>
+
+
+          <article class="gym-feature">
+
+            <span class="gym-feature-number">
+              02
+            </span>
+
+            <h3>
+              ATTREZZATURA
+            </h3>
+
+            <p>
+              Tutto ciò che ti serve per costruire un allenamento
+              completo e lavorare sui tuoi obiettivi.
+            </p>
+
+          </article>
+
+
+          <article class="gym-feature">
+
+            <span class="gym-feature-number">
+              03
+            </span>
+
+            <h3>
+              PERSONE
+            </h3>
+
+            <p>
+              Un ambiente in cui trovare supporto, competenza
+              e un approccio orientato al miglioramento.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PERCORSI -->
+    <section class="gym-paths">
+
+      <div class="container gym-paths-grid">
+
+        <div class="gym-paths-content">
+
+          <p class="gym-label">
+            IL TUO PERCORSO
+          </p>
+
+          <h2>
+            TROVA IL MODO<br />
+            GIUSTO PER <span>TE.</span>
+          </h2>
+
+          <p>
+            Sala pesi, Karate e Personal Training:
+            percorsi diversi, accomunati dalla stessa
+            voglia di migliorare.
+          </p>
+
+          <a
+            href={`${base}corsi/`}
+            class="secondary-button"
+          >
+            Scopri i corsi
+          </a>
+
+        </div>
+
+
+        <div class="gym-paths-image">
+
+          <img
+            src={`${base}images/corsi-sala-pesi.jpg`}
+            alt="Allenamento nella sala pesi DFL GYM"
+          />
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="gym-cta">
+
+      <div class="container">
+
+        <p class="gym-label">
+          PRONTO A INIZIARE?
+        </p>
+
+        <h2>
+          IL TUO PERCORSO<br />
+          <span>COMINCIA QUI.</span>
+        </h2>
+
+        <a
+          href={`${base}contatti/`}
+          class="primary-button"
+        >
+          Inizia ora
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</BaseLayout>

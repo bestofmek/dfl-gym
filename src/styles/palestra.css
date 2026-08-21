@@ -1,8 +1,8 @@
 /* =========================================================
-   CONTACTS PAGE
+   PALESTRA PAGE
 ========================================================= */
 
-.contacts-page {
+.gym-page {
   background: var(--color-black);
 }
 
@@ -11,7 +11,7 @@
    LABEL
 ========================================================= */
 
-.contacts-label {
+.gym-label {
   display: block;
 
   color: var(--color-accent);
@@ -29,7 +29,7 @@
    HERO
 ========================================================= */
 
-.contacts-hero {
+.gym-hero {
   position: relative;
 
   min-height: 72vh;
@@ -60,7 +60,7 @@
     );
 }
 
-.contacts-hero::after {
+.gym-hero::after {
   content: '';
 
   position: absolute;
@@ -77,13 +77,13 @@
     );
 }
 
-.contacts-hero .container {
+.gym-hero .container {
   position: relative;
 
   z-index: 2;
 }
 
-.contacts-hero h1 {
+.gym-hero h1 {
   max-width: 950px;
 
   margin-top: 18px;
@@ -101,11 +101,11 @@
   text-transform: uppercase;
 }
 
-.contacts-hero h1 span {
+.gym-hero h1 span {
   color: var(--color-accent);
 }
 
-.contacts-intro {
+.gym-intro {
   max-width: 570px;
 
   margin-top: 32px;
@@ -119,22 +119,124 @@
 
 
 /* =========================================================
-   CONTACTS CONTENT
+   INTRODUCTION
 ========================================================= */
 
-.contacts-content {
+.gym-introduction {
   padding: 120px 0;
 
   background: var(--color-dark);
 }
 
-.contacts-section-heading {
+.gym-introduction-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.9fr);
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.gym-introduction-image {
+  position: relative;
+
+  overflow: hidden;
+
+  aspect-ratio: 4 / 3;
+
+  border: 1px solid rgba(32, 184, 181, 0.35);
+
+  background: #0b1414;
+}
+
+.gym-introduction-image::before {
+  content: '';
+
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  z-index: 2;
+
+  width: 55px;
+  height: 3px;
+
+  background: var(--color-accent);
+}
+
+.gym-introduction-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.gym-introduction-image:hover img {
+  transform: scale(1.03);
+}
+
+.gym-introduction-content {
+  max-width: 560px;
+}
+
+.gym-introduction-content h2 {
+  margin-top: 16px;
+
+  color: var(--color-white);
+
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+
+  line-height: 0.92;
+
+  letter-spacing: -0.065em;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+.gym-introduction-content h2 span {
+  color: var(--color-accent);
+}
+
+.gym-introduction-content p:not(.gym-label) {
+  margin-top: 26px;
+
+  color: var(--color-muted);
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+.gym-introduction-content .primary-button {
+  margin-top: 32px;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.gym-features {
+  padding: 120px 0;
+
+  background: var(--color-black);
+}
+
+.gym-section-heading {
   max-width: 800px;
 
   margin-bottom: 60px;
 }
 
-.contacts-section-heading h2 {
+.gym-section-heading h2 {
   margin-top: 16px;
 
   color: var(--color-white);
@@ -150,38 +252,31 @@
   text-transform: uppercase;
 }
 
-.contacts-section-heading h2 span {
+.gym-section-heading h2 span {
   color: var(--color-accent);
 }
 
-
-/* =========================================================
-   CONTACT GRID
-========================================================= */
-
-.contacts-grid {
+.gym-features-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact-card {
-  min-width: 0;
-
-  min-height: 260px;
+.gym-feature {
+  min-height: 300px;
 
   padding: 30px;
 
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-  background: var(--color-black);
 }
 
-.contact-number {
+.gym-feature:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gym-feature-number {
   display: block;
 
   color: var(--color-accent);
@@ -192,72 +287,57 @@
   letter-spacing: 0.08em;
 }
 
-.contact-card h3 {
-  margin-top: 32px;
+.gym-feature h3 {
+  margin-top: 70px;
 
   color: var(--color-white);
 
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: 900;
 
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
 }
 
-.contact-card p {
-  margin-top: 18px;
+.gym-feature p {
+  max-width: 320px;
+
+  margin-top: 16px;
 
   color: var(--color-muted);
 
   font-size: 0.88rem;
 
-  line-height: 1.7;
-}
-
-.contact-card a {
-  display: inline-block;
-
-  margin-top: 22px;
-
-  color: var(--color-white);
-
-  font-size: 0.88rem;
-  font-weight: 700;
-
-  transition: color 0.25s ease;
-}
-
-.contact-card a:hover {
-  color: var(--color-accent);
+  line-height: 1.65;
 }
 
 
 /* =========================================================
-   CONTACT FORM
+   PATHS
 ========================================================= */
 
-.contacts-form-section {
+.gym-paths {
   padding: 120px 0;
 
-  background: var(--color-black);
+  background: var(--color-dark);
 }
 
-.contacts-form-grid {
+.gym-paths-grid {
   display: grid;
 
   grid-template-columns:
     minmax(0, 0.85fr)
     minmax(0, 1fr);
 
-  align-items: start;
+  align-items: center;
 
   gap: 80px;
 }
 
-.contacts-form-content {
+.gym-paths-content {
   max-width: 520px;
 }
 
-.contacts-form-content h2 {
+.gym-paths-content h2 {
   margin-top: 16px;
 
   color: var(--color-white);
@@ -273,11 +353,11 @@
   text-transform: uppercase;
 }
 
-.contacts-form-content h2 span {
+.gym-paths-content h2 span {
   color: var(--color-accent);
 }
 
-.contacts-form-content p {
+.gym-paths-content p:not(.gym-label) {
   margin-top: 28px;
 
   color: var(--color-muted);
@@ -287,81 +367,51 @@
   line-height: 1.7;
 }
 
+.gym-paths-content .secondary-button {
+  display: inline-block;
 
-/* =========================================================
-   FORM
-========================================================= */
-
-.contacts-form {
-  display: grid;
-
-  gap: 18px;
+  margin-top: 30px;
 }
 
-.contacts-form-group {
-  display: flex;
+.gym-paths-image {
+  position: relative;
 
-  flex-direction: column;
+  overflow: hidden;
 
-  gap: 8px;
+  aspect-ratio: 4 / 3;
+
+  border: 1px solid rgba(32, 184, 181, 0.35);
+
+  background: #0b1414;
 }
 
-.contacts-form-group label {
-  color: var(--color-white);
+.gym-paths-image::after {
+  content: '';
 
-  font-size: 0.72rem;
-  font-weight: 800;
+  position: absolute;
+  inset: 0;
 
-  letter-spacing: 0.1em;
+  pointer-events: none;
 
-  text-transform: uppercase;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(32, 184, 181, 0.12),
+      rgba(0, 0, 0, 0.48)
+    );
 }
 
-.contacts-form-group input,
-.contacts-form-group textarea,
-.contacts-form-group select {
+.gym-paths-image img {
   width: 100%;
+  height: 100%;
 
-  padding: 14px 16px;
+  object-fit: cover;
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 3px;
-
-  outline: none;
-
-  background: var(--color-dark);
-  color: var(--color-white);
-
-  font-size: 0.88rem;
-
-  transition:
-    border-color 0.25s ease,
-    background 0.25s ease;
+  transition: transform 0.5s ease;
 }
 
-.contacts-form-group textarea {
-  min-height: 150px;
-
-  resize: vertical;
-}
-
-.contacts-form-group input::placeholder,
-.contacts-form-group textarea::placeholder {
-  color: rgba(166, 173, 171, 0.65);
-}
-
-.contacts-form-group input:focus,
-.contacts-form-group textarea:focus,
-.contacts-form-group select:focus {
-  border-color: var(--color-accent);
-
-  background: #0b1111;
-}
-
-.contacts-form .primary-button {
-  justify-self: start;
-
-  margin-top: 10px;
+.gym-paths-image:hover img {
+  transform: scale(1.03);
 }
 
 
@@ -369,7 +419,7 @@
    CTA
 ========================================================= */
 
-.contacts-cta {
+.gym-cta {
   padding: 130px 0;
 
   text-align: center;
@@ -383,7 +433,11 @@
     var(--color-black);
 }
 
-.contacts-cta h2 {
+.gym-cta .gym-label {
+  margin-bottom: 18px;
+}
+
+.gym-cta h2 {
   color: var(--color-white);
 
   font-size: clamp(3rem, 7vw, 6.5rem);
@@ -397,11 +451,11 @@
   text-transform: uppercase;
 }
 
-.contacts-cta h2 span {
+.gym-cta h2 span {
   color: var(--color-accent);
 }
 
-.contacts-cta .primary-button {
+.gym-cta .primary-button {
   margin-top: 38px;
 }
 
@@ -412,45 +466,70 @@
 
 @media (max-width: 900px) {
 
-  .contacts-hero {
+  .gym-hero {
     min-height: auto;
 
     padding: 120px 0 80px;
   }
 
-  .contacts-hero h1 {
+  .gym-hero h1 {
     font-size: clamp(3.4rem, 11vw, 6rem);
   }
 
-  .contacts-content {
+  .gym-introduction {
     padding: 90px 0;
   }
 
-  .contacts-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-card {
-    min-height: auto;
-
-    padding: 28px 24px;
-  }
-
-  .contacts-form-section {
-    padding: 90px 0;
-  }
-
-  .contacts-form-grid {
+  .gym-introduction-grid {
     grid-template-columns: 1fr;
 
     gap: 50px;
   }
 
-  .contacts-form-content {
+  .gym-introduction-content {
     max-width: 700px;
   }
 
-  .contacts-cta {
+  .gym-features {
+    padding: 90px 0;
+  }
+
+  .gym-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gym-feature {
+    min-height: auto;
+
+    padding: 28px 24px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .gym-feature:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .gym-feature h3 {
+    margin-top: 40px;
+  }
+
+  .gym-paths {
+    padding: 90px 0;
+  }
+
+  .gym-paths-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .gym-paths-content {
+    max-width: 700px;
+  }
+
+  .gym-cta {
     padding: 100px 0;
   }
 }
@@ -462,13 +541,13 @@
 
 @media (max-width: 600px) {
 
-  .contacts-hero {
+  .gym-hero {
     min-height: auto;
 
     padding: 110px 0 70px;
   }
 
-  .contacts-hero h1 {
+  .gym-hero h1 {
     margin-top: 14px;
 
     font-size: clamp(3rem, 14vw, 4.7rem);
@@ -478,7 +557,7 @@
     letter-spacing: -0.065em;
   }
 
-  .contacts-intro {
+  .gym-intro {
     margin-top: 24px;
 
     font-size: 0.86rem;
@@ -487,87 +566,100 @@
   }
 
 
-  /* CONTENT */
+  /* INTRO */
 
-  .contacts-content {
+  .gym-introduction {
     padding: 70px 0;
   }
 
-  .contacts-section-heading {
+  .gym-introduction-grid {
+    gap: 38px;
+  }
+
+  .gym-introduction-content h2 {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+  }
+
+  .gym-introduction-content p:not(.gym-label) {
+    margin-top: 20px;
+
+    font-size: 0.86rem;
+
+    line-height: 1.65;
+  }
+
+  .gym-introduction-content .primary-button {
+    width: 100%;
+
+    margin-top: 28px;
+  }
+
+
+  /* FEATURES */
+
+  .gym-features {
+    padding: 70px 0;
+  }
+
+  .gym-section-heading {
     margin-bottom: 40px;
   }
 
-  .contacts-section-heading h2 {
+  .gym-section-heading h2 {
     font-size: clamp(2.6rem, 12vw, 4.2rem);
   }
 
-  .contact-card {
+  .gym-feature {
     padding: 24px 20px;
   }
 
-  .contact-card h3 {
-    margin-top: 28px;
+  .gym-feature h3 {
+    margin-top: 34px;
 
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
-  .contact-card p {
-    font-size: 0.82rem;
-  }
-
-  .contact-card a {
+  .gym-feature p {
     font-size: 0.82rem;
   }
 
 
-  /* FORM */
+  /* PATHS */
 
-  .contacts-form-section {
+  .gym-paths {
     padding: 70px 0;
   }
 
-  .contacts-form-grid {
+  .gym-paths-grid {
     gap: 36px;
   }
 
-  .contacts-form-content h2 {
+  .gym-paths-content h2 {
     font-size: clamp(2.6rem, 12vw, 4.2rem);
   }
 
-  .contacts-form-content p {
+  .gym-paths-content p:not(.gym-label) {
     margin-top: 22px;
 
     font-size: 0.86rem;
   }
 
-  .contacts-form-group input,
-  .contacts-form-group textarea,
-  .contacts-form-group select {
-    padding: 13px 14px;
-
-    font-size: 0.82rem;
-  }
-
-  .contacts-form-group textarea {
-    min-height: 130px;
-  }
-
-  .contacts-form .primary-button {
-    width: 100%;
+  .gym-paths-image {
+    aspect-ratio: 4 / 3;
   }
 
 
   /* CTA */
 
-  .contacts-cta {
+  .gym-cta {
     padding: 80px 0;
   }
 
-  .contacts-cta h2 {
+  .gym-cta h2 {
     font-size: clamp(2.8rem, 13vw, 4.5rem);
   }
 
-  .contacts-cta .primary-button {
+  .gym-cta .primary-button {
     width: 100%;
 
     margin-top: 30px;
@@ -581,31 +673,30 @@
 
 @media (max-width: 380px) {
 
-  .contacts-hero {
+  .gym-hero {
     padding: 100px 0 60px;
   }
 
-  .contacts-hero h1 {
+  .gym-hero h1 {
     font-size: clamp(2.7rem, 14vw, 4rem);
   }
 
-  .contacts-content {
+  .gym-introduction,
+  .gym-features,
+  .gym-paths {
     padding: 60px 0;
   }
 
-  .contacts-section-heading h2 {
+  .gym-section-heading h2,
+  .gym-paths-content h2 {
     font-size: clamp(2.4rem, 13vw, 3.7rem);
   }
 
-  .contacts-form-section {
-    padding: 60px 0;
-  }
-
-  .contacts-cta {
+  .gym-cta {
     padding: 70px 0;
   }
 
-  .contacts-cta h2 {
+  .gym-cta h2 {
     font-size: clamp(2.6rem, 13vw, 4rem);
   }
 }
